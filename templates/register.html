@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title%}Registration{% endblock %}
+
+{% block content%}
+
+<div class="container">
+<section class="min-vh-100 d-flex flex-column align-items-center justify-content-center bg-light py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-lg-8 col-md-10">
+
+        <!-- Logo -->
+        <div class="text-center mb-4">
+          <a href="index.html" class="d-inline-flex align-items-center">
+            <img src="assets/img/logo.png" class="me-2" alt="logo" style="height: 40px;">
+            <span class="fs-4 fw-bold d-none d-lg-inline">NiceAdmin</span>
+          </a>
+        </div>
+
+        <!-- Card -->
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+
+            <div class="text-center mb-4">
+              <h3 class="fw-bold">Create an Account</h3>
+              <p class="text-muted">Enter your personal details to create an account</p>
+            </div>
+
+            <form id="registerForm" class="row g-3 needs-validation" novalidate>
+
+              <!-- Firstname -->
+              <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" name="first_name" class="form-control form-control-lg" required>
+                <div class="invalid-feedback">Please enter your first name.</div>
+              </div>
+
+              <!-- Lastname -->
+              <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" name="last_name" class="form-control form-control-lg" required>
+                <div class="invalid-feedback">Please enter your last name.</div>
+              </div>
+
+              <!-- Email -->
+              <div class="col-12">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control form-control-lg" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+
+              <!-- Username -->
+              <div class="col-12">
+                <label class="form-label">Username</label>
+                <div class="input-group input-group-lg has-validation">
+                  <span class="input-group-text">@</span>
+                  <input type="text" name="username" class="form-control" required>
+                  <div class="invalid-feedback">Please choose a username.</div>
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="col-12">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control form-control-lg" required>
+                <div class="invalid-feedback">Please enter a password.</div>
+              </div>
+
+              <div class="col-12">
+                  <label class="form-label">Confirm Password</label>
+                  <input type="password" name="password2" class="form-control form-control-lg" required>
+                  <div class="invalid-feedback">Please confirm your password.</div>
+              </div>
+
+
+
+
+              <!-- Terms -->
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="terms" required>
+                  <label class="form-check-label">
+                    I agree and accept the <a href="#">terms and conditions</a>.
+                  </label>
+                  <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <div class="col-12">
+                <button class="btn btn-primary btn-lg w-100" type="submit">
+                  Create Account
+                </button>
+              </div>
+
+              <!-- Login -->
+              <div class="col-12 text-center">
+                <p class="small">
+                  Already have an account?
+                  <a href="pages-login.html">Log in</a>
+                </p>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-3 small text-muted">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </div>
+
+
+{% endblock %}
